@@ -1,9 +1,15 @@
 "use strict";
-//imprimindo cada letra de uma palavra
-const textoLetras = "arara";
-for (let primeiroIndice = 0; primeiroIndice < textoLetras.length; primeiroIndice++) {
-    console.log(textoLetras[primeiroIndice]);
+//Contando quantas vogais tem a letra
+const textoLetras = "maria";
+const vogais = "aeiou";
+let novoContador = 0;
+for (let indiceLetras = 0; indiceLetras < textoLetras.length; indiceLetras++) {
+    const letraAtual = textoLetras[indiceLetras];
+    if (vogais.includes(letraAtual)) {
+        novoContador++;
+    }
 }
+console.log(novoContador);
 //logica para inverter o texto
 function inverterTexto(textoInverter) {
     let textoInvertido = "";
