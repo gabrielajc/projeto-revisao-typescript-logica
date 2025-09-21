@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercício TypeScript</title>
+<style>
+  /* Reset básico */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+  }
+
+  .container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s ease;
+  }
+
+  .container:hover {
+    transform: translateY(-5px);
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    color: #0b428a;
+  }
+
+  img {
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+
+  label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+    text-align: left;
+  }
+
+  input, select {
+    width: 100%;
+    padding: 10px 12px;
+    margin: 8px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  input:focus, select:focus {
+    border-color: #1a73e8;
+    box-shadow: 0 0 5px rgba(26, 115, 232, 0.3);
+    outline: none;
+  }
+
+  #resultado {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    min-height: 40px;
+    background-color: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+
+  #resultado.exibir {
+    background-color: #e0f7fa;
+    border-color: #4dd0e1;
+    color: #006064;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <img src="https://lh3.googleusercontent.com/pw/AP1GczPt9j-L4wUGjS3dxkhhPkbOOwuxiXRfCYZoTmx2olpamZndUSCrtWEJ6yP6es5o7YY-tJdAWrn-j7qAi6M73XIhX76C5TeooRkrgEpQiDGx3qhwJTmEMMXnXodyesdMEJwfJXZ-Mu_lEy5vFbIfcCrL2g=w587-h587-s-no-gm?authuser=0" alt="Imagem" />
+
+  <h2>Mago das palavras</h2>
+
+  <!-- Imagem adicionada -->
+  <label for="palavra">Digite uma palavra:</label>
+  <input type="text" id="palavra" placeholder="Ex: banana">
+
+  <label for="acao">Escolha uma ação:</label>
+  <select id="acao">
+    <option value="inverter">Palavra ao contrário</option>
+    <option value="tamanho">Número de letras</option>
+    <option value="palindromo">Verificar se é palíndromo</option>
+  </select>
+
+  <div id="resultado"></div>
+</div>
+
+<script defer src="lacos.js" type="module"></script>
+</body>
+</html>
