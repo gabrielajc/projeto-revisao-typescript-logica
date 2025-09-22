@@ -88,6 +88,19 @@
     background-color: #e0f7fa;
     border-color: #4dd0e1;
     color: #006064;
+
+  }  
+  
+  #acao {
+    color:#868686
+  }
+
+   #acao option{
+    color:#000000
+  }
+
+     #acao .disabled{
+    color:#868686
   }
 </style>
 </head>
@@ -96,22 +109,23 @@
 <div class="container">
     <img src="https://lh3.googleusercontent.com/pw/AP1GczPt9j-L4wUGjS3dxkhhPkbOOwuxiXRfCYZoTmx2olpamZndUSCrtWEJ6yP6es5o7YY-tJdAWrn-j7qAi6M73XIhX76C5TeooRkrgEpQiDGx3qhwJTmEMMXnXodyesdMEJwfJXZ-Mu_lEy5vFbIfcCrL2g=w587-h587-s-no-gm?authuser=0" alt="Imagem" />
 
-  <h2>Mago das palavras</h2>
+  <h2>Pergunte ao mago das palavras</h2>
 
   <!-- Imagem adicionada -->
   <label for="palavra">Digite uma palavra:</label>
   <input type="text" id="palavra" placeholder="Ex: banana">
 
-  <label for="acao">Escolha uma ação:</label>
+  <label for="acao">Solicite ao Mago:</label>
   <select id="acao">
-    <option value="inverter">Palavra ao contrário</option>
-    <option value="tamanho">Número de letras</option>
-    <option value="palindromo">Verificar se é palíndromo</option>
+    <option value="" class="disabled" disabled selected>Escolha uma ação...</option>
+    <option value="inverter">Como fica essa palavra ao contrario</option>
+    <option value="vogais">Quantas vogais tem esta palavra</option>
+    <option value="palindromo">Verifica se a palavra é um palíndromo</option>
   </select>
 
   <div id="resultado"></div>
 </div>
 
-<script defer src="lacos.js" type="module"></script>
+<script type="module" defer src="mostra-lacos.js" ></script>
 </body>
 </html>
